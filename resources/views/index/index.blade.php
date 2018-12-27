@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
 
-    <title>Bootstrap Admin Template </title>
+    <title>{{$title}}</title>
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- global stylesheets -->

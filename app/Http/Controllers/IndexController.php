@@ -13,7 +13,20 @@ class IndexController extends Controller
      */
     public function index(Request $request)
     {
+        return view('index.index', [
+            'title' => '首页'
+        ]);
+    }
 
-        return view('index.index');
+    public function file(Request $request)
+    {
+        if ($request->hasFile('file'))
+        {
+            $request->file('file')->store('upload');
+            exit;
+        }
+        return view('index.file', [
+            '' => ''
+        ]);
     }
 }

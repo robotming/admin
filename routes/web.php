@@ -10,5 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
 Route::get('/', 'IndexController@index');
+
+Route::get('/test', function (Request $request) {
+    echo 'test';
+    dd($request->method());
+
+})->middleware('test:300');
+
+Route::get('/file', 'IndexController@file');
+Route::post('/file', 'IndexController@file');
